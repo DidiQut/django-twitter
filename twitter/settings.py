@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # third party
     'rest_framework',
+    'debug_toolbar',
 
     # project apps
     'accounts',
@@ -52,6 +53,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
